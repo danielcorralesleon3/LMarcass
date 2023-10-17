@@ -1,0 +1,36 @@
+.seccio-noticies
+{
+    background-color: #444;
+    font-family: 'Franklin Gothic Medium';
+    color: white;
+    align-items: center;
+}
+
+.noticia
+{
+font-family: sans-serif;
+margin: 20px;
+}
+
+img
+{
+size: 100px;
+height: auto;
+align-content: left;
+}
+
+h3
+{
+font-weight: bold;
+color: blue;
+}
+
+a
+{
+color: green;
+}
+
+a:hover
+{
+color: purple;
+}
