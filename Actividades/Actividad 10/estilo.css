@@ -1,0 +1,41 @@
+body
+{
+    font-family: Arial;
+    background-color: #F3F4F6;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1
+{
+color: #333;
+align-items: center;
+padding-bottom: 20px;
+padding-top: 20px;
+background-color: #E0E0E0;
+}
+
+h2
+{
+color: #555;
+padding: 10px;
+margin-left: 20px;
+}
+
+ul
+{
+    margin-left: 40px;
+    list-style-type: circle;
+}
+
+li
+{
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.destacat
+{
+text-size-adjust: 1.5px;
+color: #FF5733;
+}
