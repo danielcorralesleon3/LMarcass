@@ -3,10 +3,10 @@
     background-color: #444;
     font-family: 'Franklin Gothic Medium';
     color: white;
-    align-items: center;
+    text-align: center;
 }
 
-.noticia
+p
 {
 font-family: sans-serif;
 margin: 20px;
@@ -14,7 +14,7 @@ margin: 20px;
 
 img
 {
-size: 100px;
+width: 100px;
 height: auto;
 align-content: left;
 }
