@@ -1,0 +1,42 @@
+body
+{
+background-color: bisque;
+}
+header
+{
+float: inline-start;
+background-color: bisque;
+text-align: left;
+padding-top: 50px;
+}
+nav
+{
+    float: left;
+    clear: left;
+background-color: azure;
+padding: 20px;
+padding-top: 20px;
+}
+main
+{
+float: left;
+clear: right;
+background-color: beige;
+padding: 50px;
+padding-bottom: 20px;
+padding-top: 20px;
+}
+footer
+{
+    float: none;
+    clear: left;
+background-color: antiquewhite;
+padding: 25px;
+text-align: center;
+margin-right: 557px;
+}
+
+.no br
+{
+padding: 10px;
+}
