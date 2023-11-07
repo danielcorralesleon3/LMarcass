@@ -1,0 +1,39 @@
+main
+{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+grid-gap: 20px;
+}
+
+img
+{
+width: 225px;
+height: 250px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+article
+{
+    width: 225px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px grey;
+    text-align: center;
+    background-color: white;
+}
+article:hover
+{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+p
+{
+    text-align: left;
+    padding: 10px;
+}
+h3
+{
+    padding-left: 10px;
+    text-align: left;
+}
