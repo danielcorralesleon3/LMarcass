@@ -3,6 +3,8 @@ nav
     background-color: rgb(0, 132, 255);
     color: white;
     padding: 20px;
+    height: 20px;
+    
 }
 
 section
@@ -27,5 +29,37 @@ a
     {
         display: none;
     }
-
+    
 }
+
+@media screen and (min-width: 1024px) 
+{
+    .burger-boton
+    {
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 700px) 
+{
+    article
+    {
+        display: none;
+    }
+    form
+    {
+        display: none;
+    }
+}
+
+.burger-boton
+{
+    border: none;
+  cursor: pointer;
+}
+h2
+{
+    
+    margin-top: -10px;
+
+}   
