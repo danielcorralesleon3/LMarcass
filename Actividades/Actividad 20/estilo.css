@@ -4,8 +4,8 @@ body{
     justify-content: center;
 
 }
-.centrado{
-    text-align: center;
+.izquierda{
+    text-align: left;
 }
 .color{
     background-color: beige;
@@ -71,14 +71,45 @@ a
     }
 }
 
-.sobreNosaltres
+.flex
 {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
-
+.contenedor
+{
+    width: 80%;
+    margin: auto;
+}
 .foto1
 {
-    height: 450px;
-    width: 450px;
+    height: 300px;
+    width: 400px;
+}
+.icons
+{
+    height: 75px;
+    width: 75px;
+}
+.p20
+{
+    padding: 20px;
+}
+.bordeado
+{
+    border-radius: 10px;
+}
+.medio
+{
+    width: 50%;
+}
+.alineacionver-ver
+{
+    align-self: center;
+}
+
+.margintop
+{
+    margin-top: 5%;
 }
