@@ -12,10 +12,10 @@
          <div class="cabecera">
              CIDETech
             <article class="indice">
-                <a href="">Inici</a>
-                <a href="">Llibres</a>
-                <a href="">Autors</a>
-                <a href="">Contacte</a>
+                <a href="#1">Sobre nosaltres</a>
+                <a href="#2">Serveis</a>
+                <a href="#3">Portfolio</a>
+                <a href="#4">Contacte</a>
             </article>
             <form >
                 <input type="text" id="busqueda" placeholder="Cerca"> 
@@ -23,7 +23,7 @@
             <h2 class="burger-boton">☰</h2>
          </div>
         </section>
-        <section>
+        <section id="1">
             <div class="color">
                 <div class=" contenedor flex p20 alineacion-ver">
                     <div class="margintop">
@@ -40,15 +40,15 @@
                 </div>
             </div>
         </section>
-        <section class="contenedor p20">
+        <section class="contenedor p20" id="2">
             <h1>El Nostre Servei</h1>
             <div class="flex">
-                <article class="color bordeado iconos-contendor centro p20 sombreado">
+                <article class="color bordeado iconos-contendor centro p20 sombreado marginbot">
                     <img class="icons p20" src="./imagenes/objetivo.png">
                     <h2 class="azul">
                         Objetivo
                     </h2>
-                    <p>
+                    <p >
                         En la vastedad del horizonte de posibilidades, mi objetivo se erige como una guía luminosa. 
                     </p>
                 </article>
@@ -57,7 +57,7 @@
                     <h2 class="azul">
                         Pasion
                     </h2>
-                    <p>
+                    <p >
                         La pasión es la chispa que enciende el fuego interior, un combustible ardiente que alimenta mi energía y entusiasmo.
                     </p>
                 </article>
@@ -66,7 +66,7 @@
                     <h2 class="azul">
                         Resistencia
                     </h2>
-                    <p>
+                    <p >
                         En la danza constante con la adversidad, la resistencia emerge como mi aliada más fiel. Es la fortaleza que se forja en la fragua de los desafíos.
                     </p>
                 </article>
@@ -81,36 +81,60 @@
                 </article>
             </div>
         </section>
-        <section class="p20 color">
+        <section id="3" class="p20 color">
             <div class="contenedor">
             <h1>El Nostre Portfolio</h1>
                 <div class="flex p20 centro">
-                    <article class="contenedor-portfolio">
+                    <article class="contenedor-portfolio sombreado">
                         <img class="portfolio" src="./imagenes/protfolio1.jpeg">
                         <h3 class="azul">Montaña</h3>
-                        <p class="">
-                            Cada ascenso es una danza con la altitud,una odisea que revela la resistencia intrínseca del espíritu humano
+                        <p >
+                            Cada ascenso es una danza con la altitud.
                         </p>
                         <h5 class="azul">Veure detalls</h5>
                     </article >
-                    <article class="contenedor-portfolio">
+                    <article class="contenedor-portfolio sombreado">
                         <img class="portfolio" src="./imagenes/portfolio2.webp">
                         <h3 class="azul">Playa</h3>
-                        <p class="">
+                        <p >
                             Donde la tierra se encuentra con el océano en un abrazo eterno
                         </p>
                         <h5 class="azul">Veure detalls</h5>
                     </article>
-                    <article class="contenedor-portfolio">
+                    <article class="contenedor-portfolio sombreado">
                         <img class="portfolio" src="./imagenes/portfolio3.jpeg">
                         <h3 class="azul">Paisaje nevado</h3>
-                        <p class="">
+                        <p >
                             Bajo un manto de blanco puro, el paisaje nevado se despliega
                         </p>
                         <h5 class="azul">Veure detalls</h5>
                     </article>
-
                 </div>
+            </div>
+        </section>
+        <section id="4" class="p20">
+            <h1 class="centro">Contacta'ns</h1>
+            <p class="centro">Si tens alguna consulta, no dubtis a contactar-nos mitjançant el següent formulari</p>
+            <div class="contenedor-contacto">
+                <form>
+                    <p class="negrita">Nom:</p>
+                    <input class="tamaño-nom" type="text">
+                    <p class="negrita">Correo electrònic:</p>
+                    <input class="tamaño-nom" type="text">
+                    <p class="negrita">Missatge:</p>
+                    <input class="tamaño-des" type="text">
+                    <p>
+                        <button class="tamaño-nom azulboton" type="button">enviar</button>
+                    </p>
+                </form>
+            </div>
+        </section>
+        <section class="color-negro p20">
+            <div class="contenedor-contacto flex">
+                <article class="centro">
+                    <h2>CIDETech</h2>
+                    <p></p>
+                </article>
             </div>
         </section>
     </main>

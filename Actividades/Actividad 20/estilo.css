@@ -145,4 +145,41 @@ a
     width: 300px;
     height: 450px;
     background-color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.marginbot
+{
+    margin-bottom: 2%;
+}
+.contenedor-contacto
+{
+    width: 60%;
+    margin: auto;
+}
+.negrita
+{
+    font-weight: bold;
+}
+.tamaño-nom
+{
+width: 100%;
+border-radius: 5px;
+height: 20px;
+}
+.tamaño-des
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+.azulboton
+{
+    background-color: rgb(23, 129, 228);
+}
+.color-negro
+{
+    background-color: rgb(61, 60, 60);
+    color: white;
 }
