@@ -45,41 +45,26 @@ a
   cursor: pointer;
   margin-top: -10px;
 }
-@media screen and (max-width: 1024px) 
-{
-    .indice
-    {
-        display: none;
-    }
-    
-}
-
-@media screen and (min-width: 1024px) 
-{
-    .burger-boton
-    {
-        display: none;
-    }
-    
-}
-@media screen and (max-width: 700px) 
-{
-    .indice
-    {
-        display: none;
-    }
-    form
-    {
-        display: none;
-    }
-}
 
 .flex
 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
+.flexprotfolio
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+.flexservei
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 .contenedor
 {
     width: 80%;
@@ -180,14 +165,99 @@ height: 20px;
     background-color: rgb(61, 60, 60);
     color: white;
 }
-ultimoc
+.ultimoc
 {
-    width: 35px;
-    height: 50px;
-    background-color: blueviolet;
+    width: 250px;
+    height: 150px;
+    margin-right: 30px;
 }
 .ultimop
 {
     width: 40%;
     height: 25%;
+}
+
+.navegacion-abajo
+{
+    
+    padding: auto;
+    margin-left: -50px;
+    color: rgb(207, 203, 203);
+   
+}
+
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+.redes
+{
+    width: 25px;
+    height: 25px;
+    padding-right: 5px;
+}
+.correo
+{
+    color: blueviolet;
+}
+.final
+{
+    margin-top: 5%;
+}
+
+@media screen and (max-width: 1024px) 
+{
+    .indice
+    {
+        display: none;
+    }
+    .flexservei
+    {
+        flex-direction: row;
+    }
+   
+    .flexprotfolio
+    {
+        flex-direction: row;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) 
+{
+    .burger-boton
+    {
+        display: none;
+    }
+    .flexservei
+    {
+        flex-wrap: wrap;
+    }
+    .flexprotfolio
+    {
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 700px) 
+{
+    .indice
+    {
+        display: none;
+    }
+    form
+    {
+        display: none;
+    }
+    .flexservei
+    {
+        flex-wrap: wrap;
+    }
+    .flexprotfolio
+    {
+        flex-direction: column;
+    }
 }
