@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.4</title>
+</head>
+<body>
+        <div id="div1">
+            La luz del sol acaricia suavemente la piel, mientras el viento susurra secretos entre las hojas. En este instante, el mundo parece detenerse, permitiendo que la belleza del momento se apodere del corazón.
+        </div>
+        
+    <button id="cambio">Cambiar</button>
+    <script>
+       
+        let texto=document.getElementById("cambio");
+        let elementos=document.getElementById("div1")
+        let check=false
+        texto.addEventListener("click", function() 
+        {
+
+            if (!check)
+            {
+                elementos.textContent ="Lux solis cutem leniter tangit, dum ventus susurrat secreta inter folia. Hoc momento, mundus quasi consistere videtur, ut pulchritudo temporis cor capiat."
+            }
+            else
+            {
+                elementos.textContent="La luz del sol acaricia suavemente la piel, mientras el viento susurra secretos entre las hojas. En este instante, el mundo parece detenerse, permitiendo que la belleza del momento se apodere del corazón."
+            }
+            check=!check
+
+        });
+        elementos.addEventListener("mouseover", function()
+        {
+            elementos.style.color="red"
+        });
+        elementos.addEventListener("mouseout",function()
+        {
+            elementos.style.color="black"
+        });
+    </script>
+</body>
+</html>
