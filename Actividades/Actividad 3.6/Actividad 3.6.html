@@ -12,9 +12,8 @@
         <div class="color">
         <p> bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
         </div>
-        <div class="tamaño">
         <p> cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</p>
-        </div>
+
     <script>
         let manolo=document.querySelectorAll("p")
         let letra="b"
@@ -23,7 +22,7 @@
         {
             if (manolo.textContent.includes(letra))
             {
-            manolo.classList.add("b")
+            manolo.style.backgroundColor="red"
             manolo.addEventListener("click", noti)
             }
             if (manolo.textContent.length>tamaño)
