@@ -9,15 +9,37 @@
 <body>
         
         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <div class="color">
         <p> bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        </div>
+        <div class="tamaño">
         <p> cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</p>
-
+        </div>
     <script>
-       let manolo=document.querySelector("p")
-       let letra="b"
-       if (manolo.textContent.includes(letra))
-       {
+        let manolo=document.querySelectorAll("p")
+        let letra="b"
+        let tamaño=40
+        manolo.forEach(manolo => 
+        {
+            if (manolo.textContent.includes(letra))
+            {
             manolo.classList.add("b")
+            manolo.addEventListener("click", noti)
+            }
+            if (manolo.textContent.length>tamaño)
+            {
+                manolo.style.fontSize="50px"
+                manolo.addEventListener("click", noti2)
+            }
+           
+        });
+        function noti()
+        {
+            alert("Has pulsado el parrafo rojo")
+        }
+       function noti2()
+       {
+            alert("Has pulsado el parrafo grande")
        }
     </script>
 </body>
