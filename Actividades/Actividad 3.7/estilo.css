@@ -1,0 +1,336 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: arial;
+
+}
+
+.izquierda{
+    text-align: left;
+    padding-right: 10px;
+}
+.color{
+    background-color: whitesmoke;
+}
+
+.navegacion
+{
+    background-color: rgb(0, 132, 255);
+    color: white;
+    padding: 20px;
+    height: 20px;
+    
+}
+hr{
+    margin: 5px;
+}
+.cabecera
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a
+{
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+    width: 50px;
+    height: 100px;
+    transition: width 1s, height 1s, background-color 1s;
+}
+.burger-boton
+{
+    border: none;
+  cursor: pointer;
+  margin-top: -10px;
+  flex-wrap: wrap;
+}
+
+.flex
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.flexservei
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+.flexeo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contenedor
+{
+    width: 80%;
+    margin: auto;
+}
+.foto1
+{
+    height: 300px;
+    width: 400px;
+}
+.icons
+{
+    height: 75px;
+    width: 75px;
+    justify-content: center;
+}
+.p20
+{
+    padding: 20px;
+}
+.bordeado
+{
+    border-radius: 10px;
+}
+.medio
+{
+    width: 50%;
+}
+.alineacionver-ver
+{
+    align-self: center;
+}
+
+.margintop
+{
+    margin-top: 5%;
+}
+.iconos-contendor
+{
+    width: 215px;
+    height: 300px;
+}
+.centro{
+    text-align: center;
+}
+.azul{
+    color: rgb(23, 129, 228);
+    
+}
+.sombreado
+{
+    box-shadow: 0 4px 4px 0px rgb(177, 175, 175);
+}
+.portfolio
+{
+    width: 300px;
+    height: 300px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.contenedor-portfolio
+{
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.marginbot
+{
+    margin-bottom: 2%;
+}
+.contenedor-contacto
+{
+    width: 60%;
+    margin: auto;
+}
+.negrita
+{
+    font-weight: bold;
+}
+.tamaño-nom
+{
+width: 100%;
+border-radius: 5px;
+height: 20px;
+}
+.azulboton
+{
+    background-color: rgb(23, 129, 228);
+    height: 25px;
+    color: white;
+    width: 101%;
+}
+.color-negro
+{
+    background-color: rgb(61, 60, 60);
+    color: white;
+}
+.ultimoc
+{
+    width: 250px;
+    height: 150px;
+    margin-right: 30px;
+}
+.ultimop
+{
+    width: 40%;
+    height: 25%;
+}
+
+.navegacion-abajo
+{
+    
+    padding: auto;
+    margin-left: -50px;
+    color: rgb(207, 203, 203);
+   
+}
+
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+.redes
+{
+    width: 25px;
+    height: 25px;
+    padding-right: 5px;
+    filter: invert();
+}
+.correo
+{
+    color: blueviolet;
+}
+.final
+{
+    margin-top: 5%;
+}
+.flexredes
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+@media screen and (max-width: 1024px) 
+{
+    .flexeo
+    {
+        flex-direction: column;
+    }
+    .flexredes
+    {
+        flex-wrap: wrap;
+    }
+    .iconos-contendor
+    {
+        width: 250px;
+    }
+    .ultimoc
+    {
+        width: 150px;
+        margin-top: 10%;
+        
+    }
+    .contenedor-portfolio
+    {
+        align-self: center;
+        margin-top: 10%;
+    }
+    .flexservei
+    {
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) 
+{
+    .burger-boton
+    {
+        display: none;
+        height: 20px;
+    }
+    .desplegable
+    {
+        display: none;
+    }
+    .menuse
+    {
+        display: none;
+    }
+    .navegacion
+    {
+        height: 20px;
+    }
+   
+    
+}
+@media screen and (max-width: 700px) 
+{
+    .foto1
+    {
+        align-self: center;
+    }
+    .indice
+    {
+        display: none;
+    }
+    .busca
+    {
+        display: none;
+    }
+    .flexservei
+    {
+        flex-wrap: wrap;
+    }
+    .flexeo
+    {
+        flex-direction: column;
+        
+    }
+    .contenedor-portfolio
+    {
+        margin-top: 20%;
+    }
+    .iconos-contendor
+    {
+        margin-top: 20%;
+    }
+    .flex
+    {
+        flex-direction: column;
+    }
+    .ultimoc
+    {
+        margin-top: 10%;
+        align-self: center;
+    }
+    .flexredes
+    {
+        flex-direction: column;
+    }
+   
+    
+}
+.redes:hover
+{
+   filter: hue-rotate(240deg);
+}
+.iconos-contendor:hover
+{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+.contenedor-portfolio:hover
+{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
