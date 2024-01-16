@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.8</title>
+</head>
+<body>
+    <p>
+        Click para marcar como completada
+    </p>
+    <p>
+        Doble click para eliminar tarea
+    </p>
+    
+       <button onclick="eliminartodas()">Eliminar completadas</button>
+       <button onclick="filtrarTodas()">Mostrar todas</button>
+       <button onclick="filtrarActivas()">Mostrar no completadas</button>
+       <button onclick="filtrarCompletadas()">Mostrar completadas</button>
+    
+    <p>Escribe la tarea</p>
+    
+    
+        <input id="texto" type="text">
+        <button onclick="tarea()">Crear tarea</button>
+        <h2>Tareas:</h2>
+    <script>
+      function tarea()
+       {
+        let texto=document.getElementById("texto").value;
+        let tareas=document.createElement("p")
+        tareas.textContent=texto
+
+        tareas.addEventListener("dblclick", function(){
+            document.body.removeChild(tareas)});
+        tareas.addEventListener("click", function(){
+            tareas.style.backgroundColor="red"});
+
+        
+            document.body.appendChild(tareas);
+            
+       }
+       function eliminartodas() {
+           let tareas2=document.querySelectorAll("p")
+           tareas2.forEach(function(tarea) {
+            if (tarea.style.backgroundColor==="red") {
+                document.body.removeChild(tarea);
+            }});
+           
+        }
+
+        function filtrarTodas() {
+           let tareas=document.querySelectorAll("p")
+            
+            tareas.forEach(function(tarea) {
+                if (tarea.style.display==="none"){
+                    tarea.style.display="block"
+                }
+                
+            });
+        }
+
+        function filtrarActivas() {
+            let tareas=document.querySelectorAll("p")
+            
+            tareas.forEach(function(tarea){
+                if (tarea.style.backgroundColor!=="red") 
+                {
+                    tarea.style.display="block"
+                }
+                else
+                {
+                    tarea.style.display="none"
+                }
+            })
+        }
+
+        function filtrarCompletadas() {
+            let tareas=document.querySelectorAll("p")
+            
+            tareas.forEach(function(tarea){
+                if ((tarea.style.backgroundColor==="red")) 
+                {
+                    tarea.style.display="block"
+                }
+                else
+                {
+                    tarea.style.display="none"
+                }
+            })
+        }
+    </script>
+</body>
+</html>
