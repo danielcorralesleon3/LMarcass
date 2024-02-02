@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.10</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+</head>
+<body>
+
+        <h1>Explora el Mundo con Nuestra Agencia de Viajes</h1>
+    
+        <h2>Nueva York, EE. UU.</h2>
+        <p> Conocida como la "Gran Manzana", Nueva York es famosa por su icónica línea de horizonte, la Estatua de la Libertad, Times Square, Broadway y Central Park. Es un importante centro financiero, cultural y de moda.</p>
+
+        <h2>París, Francia</h2>
+        <p>La "Ciudad de la Luz" es famosa por la Torre Eiffel, el Museo del Louvre, la Catedral de Notre-Dame y la moda. París es un importante centro cultural y turístico con una rica historia y arquitectura impresionante.</p>
+
+        <h2>Tokio, Japón</h2>
+        <p>La capital de Japón es una metrópolis moderna y vibrante conocida por su tecnología avanzada, la moda única, la cultura pop y la deliciosa comida. Tokio es una de las ciudades más grandes y pobladas del mundo.</p>
+
+        <h2>Londres, Reino Unido</h2>
+        <p>Con una rica historia y cultura, Londres es famosa por el Palacio de Buckingham, el Parlamento, el Big Ben y el Museo Británico. Es un importante centro financiero y un punto de referencia cultural.</p>
+        <h2>¡Haz tu reserva ya!</h2>
+        <label for="datepicker">Selecciona una fecha:</label>
+        <input type="text" id="datepicker">
+        <p><label for="search">Buscar:</label>
+        <input type="text" id="search"></p>
+        <label for="rango">Ajusta tu presupuesto de viaje:</label>
+            <p id="rango">Presupuesto: $0 - $0</p>
+            
+           
+             
+        <script>
+        $(function() {
+        $("#datepicker").datepicker();});
+       
+       
+        $(function() {
+        var autocompletar = ["Tokyo","Madrid","Moscou","New York","Sevilla","Mallorca","Galicia","Berlin",];
+        $("#search").autocomplete({source: autocompletar });});
+    
+        $(function() {
+                $("#rango").slider({
+                  range: true,min: 0,max: 10000,step: 100,values: [0, 0],
+            
+                  slide: function(event, ui) {
+                    $("#rango").text("Presupuesto: $" + ui.values[0] + " - $" + ui.values[1]);
+                  }});});
+        
+ 
+        </script>
+</body>
+</html>

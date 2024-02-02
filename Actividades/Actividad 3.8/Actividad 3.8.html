@@ -6,7 +6,7 @@
     <title>Actividad 3.8</title>
 </head>
 <body>
-    <p>
+    <p id="info">
         Click para marcar como completada
     </p>
     <p>
@@ -52,7 +52,7 @@
         function filtrarTodas() {
            let tareas=document.querySelectorAll("p")
             
-            tareas.forEach(function(tarea) {
+            tareas.forEach(function(tarea){
                 if (tarea.style.display==="none"){
                     tarea.style.display="block"
                 }

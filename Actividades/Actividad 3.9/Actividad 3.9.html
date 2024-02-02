@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3.9</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>El Viaje Perdido</h1>
+    <p>En el corazón de la selva amazónica, donde la vegetación densa oculta secretos ancestrales, se encuentra una tribu olvidada por el mundo moderno. Esta comunidad aislada, conocida como los Yaraúnas, ha vivido en armonía con la naturaleza durante generaciones, manteniendo sus tradiciones intactas. Sin embargo, un día, un joven valiente llamado Kavi decide emprender un viaje en solitario más allá de los límites establecidos por sus antepasados, desafiando las creencias arraigadas de su tribu.</p>
+    <h2>Comentarios: <button id="coment"> ocultar/mostrar</button></h2>
+    <input type="text" id="texto"><button id="añadirComentario">Añadir</button>
+    <div id="content">
+
+    </div>
+
+    
+    <script>
+        $(document).ready(function () {
+            $("#coment").click(function () {
+                $("#content").toggle();
+            });});
+        $("#añadirComentario").click(function () {
+                let texto = $("#texto").val();
+                if (texto !== "") {
+                    let comment = $("<p>").text(texto).addClass("comment");
+                    let deleteButton = $("<button>").text("Eliminar").addClass("delete");
+                    
+                    comment.appendTo("#content");
+                    deleteButton.appendTo("#content");
+                    
+                    deleteButton.click(function () {
+                        comment.remove();
+                        deleteButton.remove();});
+                }
+            });
+            
+        
+    </script>
+
+</body>
+</html>
