@@ -29,8 +29,8 @@
         <input type="text" id="datepicker">
         <p><label for="search">Buscar:</label>
         <input type="text" id="search"></p>
-        <label for="rango">Ajusta tu presupuesto de viaje:</label>
-            <p id="rango">Presupuesto: $0 - $0</p>
+        <label for="rango">Ajusta el precio maximo a tu viaje: </label>
+        <p id="rango"></p>
             
            
              
@@ -48,7 +48,7 @@
                   range: true,min: 0,max: 10000,step: 100,values: [0, 0],
             
                   slide: function(event, ui) {
-                    $("#rango").text("Presupuesto: $" + ui.values[0] + " - $" + ui.values[1]);
+                    $("#rango").text(ui.values[0]+ ui.values[1]+"€");
                   }});});
         
  
