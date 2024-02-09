@@ -8,11 +8,11 @@ function TodoList() {
     }
     return (
         <div>
-            <h2>La meva Llista de Tasques</h2>
+            <h2>Mi lista</h2>
             <ul>
                 {tasks.map((task, index) => (
+                    print("Escribe la tarea")
                     <TodoItem key={index} content={task} />
-                    //
                 ))}
             </ul>
             <Button variant="success" onClick={() =>addTask("Nueva tarea")}>Añadir tarea</Button>
