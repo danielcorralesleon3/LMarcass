@@ -18,7 +18,7 @@ function ListaDeTareas() {
   return (
     <div>
       <h1>Lista de Tareas</h1>
-      <input type="text" value={nuevaTarea} onChange={(e) => setNuevaTarea(e.target.value)} placeholder="Añade una tarea a tu gusto"/>
+      <input type="text" value={nuevaTarea} onChange={(e) => setNuevaTarea(e.target.value)}/>
       <button onClick={agregarTarea}>Agregar Tarea</button>
       <ul>
         {listatareas.map((tarea, index) => (
