@@ -1,6 +1,6 @@
-import manzana from "./../Imagenes/manzanas.jpeg" ;
+import manzana from "../Imagenes/manzanas.jpeg" ;
 
-export const filas = [
+export const JSONS = [
     {
         producto: "manzana",
         cantidad: 5,precio: 2.50,
@@ -16,7 +16,7 @@ export const filas = [
         tienda: "Tienda de lacteos",
         notas: "Leche desnatada",
         comprado: true,
-        imagen: "./../Imagenes/Leche.jpg",
+        imagen: manzana,
     },
     {
         producto: "Pan",
@@ -25,7 +25,7 @@ export const filas = [
         tienda: "Panaderia B",
         notas: "Pan integral",
         comprado: false,
-        imagen: "./../Imagenes/Pan.jpg",
+        imagen: manzana,
     },
     {
         producto: "Huevos",
@@ -34,7 +34,7 @@ export const filas = [
         tienda: "Granja fresh",
         notas: "Huevos organicos",
         comprado: false,
-        imagen: "./../Imagenes/Huevos.jpg",
+        imagen: manzana,
     },
     {
         producto: "Pollo",
@@ -43,7 +43,7 @@ export const filas = [
         tienda: "Carniceria B",
         notas: "Pechuga de pollo",
         comprado: false,
-        imagen: "./../Imagenes/Pollo.jpeg",
+        imagen: manzana,
     },
     {
         producto: "Cereal",
@@ -52,7 +52,7 @@ export const filas = [
         tienda: "Panaderia B",
         notas: "Pan integral",
         comprado: false,
-        imagen: "./../Imagenes/Pan.jpg",
+        imagen: manzana,
     },
     {
         producto: "Tomates",
@@ -61,7 +61,7 @@ export const filas = [
         tienda: "Fruteria B",
         notas: "Tomates organicos",
         comprado: false,
-        imagen: "./../Imagenes/tomates.jpg",
+        imagen: manzana,
     },
     {
         producto: "Pasta",
@@ -70,7 +70,7 @@ export const filas = [
         tienda: "Tienda de comestibles",
         notas: "Jabon liquido",
         comprado: false,
-        imagen: "./../Imagenes/jabon.jpg",
+        imagen: manzana,
     },
     {
         producto: "Agua",
@@ -79,6 +79,6 @@ export const filas = [
         tienda: "Gasolinera B",
         notas: "Botella de agua",
         comprado: false,
-        imagen: "./../Imagenes/agua.jpg",
+        imagen: manzana,
     },
   ];
