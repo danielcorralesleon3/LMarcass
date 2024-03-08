@@ -15,7 +15,7 @@ function App() {
     <Navbar expand="lg">
       <Container>
         <ul>
-          <li><Navbar.Brand href="/./paginas/Bienvenida">Indice</Navbar.Brand> </li>
+          <li><Navbar.Brand href="./paginas/Bienvenida">Indice</Navbar.Brand> </li>
           <li><Navbar.Brand href='/LugaresDeInteres'>Lugares de interes</Navbar.Brand></li>
           <li><Navbar.Brand href='/Hoteles'>Hoteles</Navbar.Brand></li>
           <li><Navbar.Brand href='/Restaurantes'>Restaurantes</Navbar.Brand></li>
