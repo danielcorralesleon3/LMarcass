@@ -15,7 +15,7 @@ function App() {
 
       <Navbar bg="light" data-bs-theme="light">
       <Container>
-          <Navbar.Brand as={Link} to='/Bienvenida'>Indice</Navbar.Brand>
+          <Nav.Link as={Link} to='/Bienvenida'>Indice</Nav.Link>
           <Nav.Link as={Link} to='/LugaresDeInteres'>Lugares de interes</Nav.Link>
           <Nav.Link  as={Link} to='/Hoteles'>Hoteles</Nav.Link>
           <Nav.Link as={Link} to='/Restaurantes'>Restaurantes</Nav.Link>
