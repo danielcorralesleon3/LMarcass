@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/static/css/main.db62923b.css",
-    "main.js": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/static/js/main.2f63549d.js",
+    "main.js": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/static/js/main.003a6e6b.js",
     "static/js/453.194d3f78.chunk.js": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/static/js/453.194d3f78.chunk.js",
     "index.html": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/index.html",
     "main.db62923b.css.map": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/static/css/main.db62923b.css.map",
-    "main.2f63549d.js.map": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/static/js/main.2f63549d.js.map",
+    "main.003a6e6b.js.map": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/static/js/main.003a6e6b.js.map",
     "453.194d3f78.chunk.js.map": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build/static/js/453.194d3f78.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db62923b.css",
-    "static/js/main.2f63549d.js"
+    "static/js/main.003a6e6b.js"
   ]
 }

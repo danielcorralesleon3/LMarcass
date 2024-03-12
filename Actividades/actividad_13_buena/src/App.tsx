@@ -15,13 +15,13 @@ function App() {
 
       <Navbar bg="light" data-bs-theme="light">
       <Container>
-          <Navbar.Brand href='/Bienvenida'>Indice</Navbar.Brand>
+          <Navbar.Brand as={Link} to='/Bienvenida'>Indice</Navbar.Brand>
           <Nav.Link as={Link} to='/LugaresDeInteres'>Lugares de interes</Nav.Link>
           <Nav.Link  as={Link} to='/Hoteles'>Hoteles</Nav.Link>
           <Nav.Link as={Link} to='/Restaurantes'>Restaurantes</Nav.Link>
           <Nav.Link  as={Link} to='/ActivitatsdeLleure'>ActivitatsdeLleure</Nav.Link>
       </Container>
-    </Navbar>
+      </Navbar>
 
     <Routes>
       <Route index element={<Bienvenida />}/>
