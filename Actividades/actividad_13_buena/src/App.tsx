@@ -16,10 +16,10 @@ function App() {
       <Navbar bg="light" data-bs-theme="light">
       <Container>
           <Nav.Link as={Link} to='/'>Indice</Nav.Link>
-          <Nav.Link as={Link} to='/LugaresDeInteres'>Lugares de interes</Nav.Link>
-          <Nav.Link  as={Link} to='/Hoteles'>Hoteles</Nav.Link>
-          <Nav.Link as={Link} to='/Restaurantes'>Restaurantes</Nav.Link>
-          <Nav.Link  as={Link} to='/ActivitatsdeLleure'>ActivitatsdeLleure</Nav.Link>
+          <Nav.Link as={Link} to='LugaresDeInteres'>Lugares de interes</Nav.Link>
+          <Nav.Link  as={Link} to='Hoteles'>Hoteles</Nav.Link>
+          <Nav.Link as={Link} to='Restaurantes'>Restaurantes</Nav.Link>
+          <Nav.Link  as={Link} to='ActivitatsdeLleure'>ActivitatsdeLleure</Nav.Link>
       </Container>
       </Navbar>
 
