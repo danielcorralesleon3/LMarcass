@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set PUBLIC_URL=https://danielcorralesleon3.github.io/LMarcass/Actividades/actividadtablabuena/build&&react-scripts build",
+    "build": "set PUBLIC_URL=https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_13_buena/build&&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
