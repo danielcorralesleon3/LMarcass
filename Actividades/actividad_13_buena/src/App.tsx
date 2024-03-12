@@ -7,6 +7,7 @@ import LugaresDeInteres from './paginas/LugaresDeInteres';
 import Hoteles from './paginas/Hoteles';
 import Restaurantes from './paginas/Restaurantes';
 import ActivitatsdeLleure from './paginas/ActivitatsdeLleure';
+import { Link } from 'react-router-dom';
 function App() {
   return (
    
@@ -15,10 +16,10 @@ function App() {
       <Navbar bg="light" data-bs-theme="light">
       <Container>
           <Navbar.Brand href='/Bienvenida'>Indice</Navbar.Brand>
-          <Nav.Link href='/LugaresDeInteres'>Lugares de interes</Nav.Link>
-          <Nav.Link href='/Hoteles'>Hoteles</Nav.Link>
-          <Nav.Link href='/Restaurantes'>Restaurantes</Nav.Link>
-          <Nav.Link href='/ActivitatsdeLleure'>ActivitatsdeLleure</Nav.Link>
+          <Nav.Link as={Link} to='/LugaresDeInteres'>Lugares de interes</Nav.Link>
+          <Nav.Link  as={Link} to='/Hoteles'>Hoteles</Nav.Link>
+          <Nav.Link as={Link} to='/Restaurantes'>Restaurantes</Nav.Link>
+          <Nav.Link  as={Link} to='/ActivitatsdeLleure'>ActivitatsdeLleure</Nav.Link>
       </Container>
     </Navbar>
 
