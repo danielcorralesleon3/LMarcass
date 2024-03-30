@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Breeds from './components/breeds';
-function App() {
+import Detalles from './components/detalles';
+import { Container ,Row,Col } from 'react-bootstrap';
+export default function App() {
+  let [RazaActual,setRazaActual] = useState<any>(null)
   return (
-    <div className="App">
-     <Breeds></Breeds>
-    </div>
+    <Container>
+        <Row><Col><Breeds setRazaActual={setRazaActual}></Breeds></Col></Row>
+        <Row><Col><Detalles raza={RazaActual}></Detalles></Col></Row>
+    </Container>
   );
 }
-
-export default App;
 

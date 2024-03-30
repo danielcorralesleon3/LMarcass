@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 export type Razas = Razas2[]
 
 export interface Razas2 {
@@ -53,45 +56,21 @@ export interface Image {
   url: string
 }
 
-/*  export default function Breeds() {
-    const [razas, setRazas] = React.useState<Razas>([]);
-  
+  export default function Breeds({setRazaActual}:{setRazaActual:Function}) {
+    const [razas, setRazas] = useState<any>(null);
     React.useEffect(() => {
       fetch("https://api.thecatapi.com/v1/breeds").then((response) => response.json()).then((data: Razas2[]) =>{
-          setRazas(data);
+      setRazas(data);
+      
         })
+      
     }, []);
-  
-    return<>{razas.map((raza, i) => {
-    return <p>{raza.name}</p>;})}</>}*/
+   return(<div>
+      <select onChange={(event)=>{ 
+        let indice=parseInt(event.target.value) 
+        let infoRaza=razas[indice]
+        setRazaActual(infoRaza)
+      }}>{razas.map((raza:Razas2, i:number)=> (<option key={i} value={i} >{raza.name}</option>))}</select>
+   </div>)
 
-
-// src/components/Breeds.js
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-
-const Breeds = () => {
-  const [breeds, setBreeds] = useState([]);
-
-  useEffect(() => {
-    fetch('https://api.thecatapi.com/v1/breeds')
-      .then(response => response.json())
-      .then(data => setBreeds(data))
-      .catch(error => console.error('Error fetching breeds:', error));
-  }, []);
-
-  return (
-    <div>
-      <h1>Razas de Gatos</h1>
-      <ul>
-        {breeds.map(breed => (
-          <li key={breed.id}>
-            <Link to={`/breeds/${breed.id}`}>{breed.name}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default Breeds;
+  }
