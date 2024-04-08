@@ -1,18 +1,15 @@
-import { resolveTripleslashReference } from "typescript";
-import { Razas2 } from "./breeds";
+import { Card } from "react-bootstrap"
+import { Raza } from "../tipos/tipos"
 
-export default function Detalles({raza}:{raza:Razas2 | null}){
-    if (raza==null) {
-        return(<h2>No se ha seleccionado una raza</h2>)
-    }
+export default function Detalles({raza}:{raza:Raza | null}){
     
     return(
     <div>
-        <h2>{raza.name}</h2>
-        <p>{raza.description}</p>
-        <p>{raza.origin}</p>
-        <p>{raza.weight.metric}</p>
-        <img src={raza.image.url}/>
+        <h2>{raza?.name}</h2>
+        <p>Descripcion: {raza?.description}</p>
+        <p>Origen: {raza?.origin}</p>
+        <p>peso: {raza?.weight?.metric}</p>
+        <img id={raza?.id} src={raza?.image?.url}/>
     </div>)
     
 }

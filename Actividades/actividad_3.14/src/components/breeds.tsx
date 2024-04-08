@@ -1,76 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Raza, Razas } from '../tipos/tipos';
 
-export type Razas = Razas2[]
 
-export interface Razas2 {
-  weight: Weight
-  id: string
-  name: string
-  cfa_url?: string
-  vetstreet_url: string
-  vcahospitals_url?: string
-  temperament: string
-  origin: string
-  country_codes: string
-  country_code: string
-  description: string
-  life_span: string
-  indoor: number
-  lap?: number
-  alt_names: string
-  adaptability: number
-  affection_level: number
-  child_friendly: number
-  dog_friendly: number
-  energy_level: number
-  grooming: number
-  health_issues: number
-  intelligence: number
-  shedding_level: number
-  social_needs: number
-  stranger_friendly: number
-  vocalisation: number
-  experimental: number
-  hairless: number
-  natural: number
-  rare: number
-  rex: number
-  suppressed_tail: number
-  short_legs: number
-  wikipedia_url: string
-  hypoallergenic: number
-  reference_image_id: string
-  image: Image
-}
-
-export interface Weight {
-  imperial: string
-  metric: string
-}
-
-export interface Image {
-  id: string
-  width: number
-  height: number
-  url: string
-}
-
-  export default function Breeds({setRazaActual}:{setRazaActual:Function}) {
-    const [razas, setRazas] = useState<any>(null);
-    React.useEffect(() => {
-      fetch("https://api.thecatapi.com/v1/breeds").then((response) => response.json()).then((data: Razas2[]) =>{
+export default function Breeds({ setRazaActual }: { setRazaActual: Function }) {
+  const [razas, setRazas] = useState<Razas>([]);
+  React.useEffect(() => {
+    fetch("https://api.thecatapi.com/v1/breeds").then((response) => response.json()).then((data: Razas) => {
       setRazas(data);
-      
-        })
-      
-    }, []);
-   return(<div>
-      <select onChange={(event)=>{ 
-        let indice=parseInt(event.target.value) 
-        let infoRaza=razas[indice]
-        setRazaActual(infoRaza)
-      }}>{razas.map((raza:Razas2, i:number)=> (<option key={i} value={i} >{raza.name}</option>))}</select>
-   </div>)
 
-  }
+    })
+
+  }, []);
+  return (<div>
+    <select onChange={(event) => {
+      let indice = parseInt(event.target.value)
+      let infoRaza = razas[indice]
+      setRazaActual(infoRaza)
+    }}>{razas.map((raza: Raza, i: number) => (<option key={i} value={i} >{raza.name}</option>))}</select>
+  </div>)
+
+}
