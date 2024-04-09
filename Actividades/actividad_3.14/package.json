@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set PUBLIC_URL=https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_3.14/build&&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
