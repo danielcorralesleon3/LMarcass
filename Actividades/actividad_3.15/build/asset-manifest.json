@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_3.15/build/static/css/main.e106a6f8.css",
+    "main.js": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_3.15/build/static/js/main.fcc232c9.js",
+    "static/js/453.dd8a6076.chunk.js": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_3.15/build/static/js/453.dd8a6076.chunk.js",
+    "index.html": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_3.15/build/index.html",
+    "main.e106a6f8.css.map": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_3.15/build/static/css/main.e106a6f8.css.map",
+    "main.fcc232c9.js.map": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_3.15/build/static/js/main.fcc232c9.js.map",
+    "453.dd8a6076.chunk.js.map": "https://danielcorralesleon3.github.io/LMarcass/Actividades/actividad_3.15/build/static/js/453.dd8a6076.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e106a6f8.css",
+    "static/js/main.fcc232c9.js"
+  ]
+}
