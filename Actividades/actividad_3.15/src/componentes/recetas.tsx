@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-
+import "./patatas.json";
 interface indice{
     id:number,
     nombre:string,
@@ -12,7 +12,7 @@ interface indice{
 export default function Recetas() {
     const [patata, setpatata] = useState<indice[]>([]);
     React.useEffect(() => {
-        fetch("https://api.thecatapi.com/v1/breeds").then((response) => response.json()).then((data: indice[]) => {
+        fetch("https://raw.githubusercontent.com/danielcorralesleon3/LMarcass/main/Actividades/actividad_3.15/src/componentes/patatas.json").then((response) => response.json()).then((data: indice[]) => {
           setpatata(data);
     
         })
