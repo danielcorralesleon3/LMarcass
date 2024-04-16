@@ -51,9 +51,12 @@ export default function Recetas() {
                 <h2> Top {receta.id}</h2>
                 <p>
                     {receta.nombre}
-                    
-                    {receta.vegano? "Vegano":"No vegano"}
                 </p>
+                <p>
+                {receta.vegano? "Vegano":"No vegano"}
+                </p>
+                    
+                
                 <p><img height="500px" width="500px" src={receta.imagen}/></p>
             </div>
         ))}
