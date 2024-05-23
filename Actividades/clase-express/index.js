@@ -97,14 +97,6 @@ app.get('/detalles', (req, res) => {
   res.render('detalles', { usuario: row })
 })
 
-app.get('/detallesComandas', (req, res) => {
-  id = req.query.ID
-  console.log("req.query "+ req.query);
-  const row = db.prepare('SELECT * from usuarios where ID = ?').get(id);
-  console.log("row "+row);
-  res.render('detalles', { usuario: row })
-})
-
 
 
 
