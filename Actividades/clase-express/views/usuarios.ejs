@@ -1,6 +1,6 @@
 <%- include("header") %>
 
-<% msgs.forEach((usuario,index)=>{ %>
-<p><%=usuario.nombre %></p>
- //<% })%>
+<% usuarios.forEach((usuario,index)=>{ %>
+<p><a href="/detalles?ID=<%= usuario.ID %>"><%=usuario.nombre %></a></p>
+ <% })%>
 <%- include("footer") %>

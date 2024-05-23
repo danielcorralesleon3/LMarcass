@@ -11,10 +11,11 @@ app.use(express.urlencoded({extended:true}))
 
 //ejercicio 6.1
 
-  app.get('/usuaris', (req, res) => {
+  app.get('/usuarios', (req, res) => {
     resultadoSelect=req.query.id;
     const rows=db.prepare("SELECT * from usuarios").all();
-    res.json(rows)
+    console.log(rows);
+    res.render('usuarios', usuarios = rows)
   })
 
   app.get('/usuari', (req, res) => {
@@ -23,10 +24,10 @@ app.use(express.urlencoded({extended:true}))
     res.json(rows)
   })
 
-  app.get('/productes', (req, res) => {
+  app.get('/productos', (req, res) => {
     resultadoSelect=req.query.id;
     const rows=db.prepare("SELECT * from productes").all();
-    res.json(rows)
+    res.render('productos' ,{producto: rows})
   })
 
 
@@ -39,7 +40,8 @@ app.use(express.urlencoded({extended:true}))
   app.get('/comandes', (req, res) => {
     resultadoSelect=req.query.id;
     const rows=db.prepare("SELECT * from comandes c join productes p on c.producte_id=p.id join usuarios u on c.usuario_id=u.id ").all();
-    res.json(rows)
+    
+    res.render('comandes', {comanda: rows})
   })
 
   app.get('/comanda', (req, res) => {
@@ -73,23 +75,46 @@ app.get('/producto', (req, res) => {
 
 app.post("/producto",(req,res) =>{
   console.log(req.body)
-  if (!req.body.nombre || !req.body.precio ||req.body.precio<0) {
+  if (!req.body.nom || !req.body.precio ||req.body.precio<0) {
     throw new Error ("Nombre o precio incorrecto");
   }
-  if (req.body.nombre && req.body.precio) {
-    const statement=db.prepare("insert into productes (nombre,precio)VALUES (?,?)")
-    statement.run(req.body.nombre,req.body.precio)
+  if (req.body.nom && req.body.precio) {
+    const statement=db.prepare("insert into productes (nom,precio)VALUES (?,?)")
+    statement.run(req.body.nom,req.body.precio)
   }
   res.redirect("producto")
 })
 
 
 ///////////////////////////////////////////////////////////////////////////////////
+// Actividad 6.3
+
+app.get('/detalles', (req, res) => {
+  id = req.query.ID
+  console.log("req.query "+ req.query);
+  const row = db.prepare('SELECT * from usuarios where ID = ?').get(id);
+  console.log("row "+row);
+  res.render('detalles', { usuario: row })
+})
+
+app.get('/detallesComandas', (req, res) => {
+  id = req.query.ID
+  console.log("req.query "+ req.query);
+  const row = db.prepare('SELECT * from usuarios where ID = ?').get(id);
+  console.log("row "+row);
+  res.render('detalles', { usuario: row })
+})
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
 
   app.get("/",(req,res)=>{
-    resultadoSelect=req.query.id;
-    const rows=db.prepare("SELECT * from usuarios").all();
-    res.render("index",msgs=rows);
+    
   })
 
 
