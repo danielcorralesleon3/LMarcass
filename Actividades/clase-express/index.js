@@ -1,5 +1,5 @@
-const express = require('express')
-const db = require('better-sqlite3')('usuarios.sqlite');
+const express = require("express")
+const db = require("better-sqlite3")("usuarios.sqlite");
 
 const app = express()
 const port = 3000
@@ -11,37 +11,37 @@ app.use(express.urlencoded({extended:true}))
 
 //ejercicio 6.1
 
-  app.get('/usuarios', (req, res) => {
+  app.get("/usuarios", (req, res) => {
     resultadoSelect=req.query.id;
     const rows=db.prepare("SELECT * from usuarios").all();
     console.log(rows);
-    res.render('usuarios', usuarios = rows)
+    res.render("usuarios", usuarios = rows)
   })
 
-  app.get('/usuari', (req, res) => {
+  app.get("/usuari", (req, res) => {
     usuariosID=req.query.id;
     const rows=db.prepare("SELECT * from usuarios where ID=?").get(usuariosID);
     res.json(rows)
   })
 
-  app.get('/productos', (req, res) => {
+  app.get("/productos", (req, res) => {
     resultadoSelect=req.query.id;
     const rows=db.prepare("SELECT * from productes").all();
-    res.render('productos' ,{producto: rows})
+    res.render("productos" ,{producto: rows})
   })
 
 
-  app.get('/producte', (req, res) => {
+  app.get("/producte", (req, res) => {
     productesID=req.query.id;
     const rows=db.prepare("SELECT * from productes where ID=?").get(productesID);
     res.json(rows)
   })
 
-  app.get('/comandes', (req, res) => {
+  app.get("/comandes", (req, res) => {
     resultadoSelect=req.query.id;
     const rows=db.prepare("SELECT * from comandes c join productes p on c.producte_id=p.id join usuarios u on c.usuario_id=u.id ").all();
     
-    res.render('comandes', {comanda: rows})
+    res.render("comandes", {comanda: rows})
   })
 
  
@@ -49,7 +49,7 @@ app.use(express.urlencoded({extended:true}))
 ///////////////////////////////////////////////////////////////////////////////
 // Actividad 6.2
 
-app.get('/usuario', (req, res) => {
+app.get("/usuario", (req, res) => {
   res.render("usuario")
 })
 
@@ -65,7 +65,7 @@ app.post("/usuario",(req,res) =>{
    res.redirect("usuario")
 })
 
-app.get('/producto', (req, res) => {
+app.get("/producto", (req, res) => {
   res.render("producto")
 })
 
@@ -85,43 +85,52 @@ app.post("/producto",(req,res) =>{
 ///////////////////////////////////////////////////////////////////////////////////
 // Actividad 6.3
 
-app.get('/detalles', (req, res) => {
+app.get("/detalles", (req, res) => {
   id = req.query.ID
-  const row = db.prepare('SELECT * from usuarios where ID = ?').get(id);
-  res.render('detalles', { usuario: row })
+  const row = db.prepare("SELECT * from usuarios where ID = ?").get(id);
+  res.render("detalles", { usuario: row })
 })
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Actividad 6.4
 
-app.get('/comanda', (req, res) =>{
-  const rowsproductos = db.prepare('SELECT * from productes').all()
-  const rowsusuario = db.prepare('SELECT * from usuarios').all()
+app.get("/comanda", (req, res) =>{
+  const rowsproductos = db.prepare("SELECT * from productes").all()
+  const rowsusuario = db.prepare("SELECT * from usuarios").all()
 
   res.render("comanda", {usuarios: rowsusuario, productes: rowsproductos});
 })
-app.post('/comanda', (req, res) => {
-  console.log(req.body);
+app.post("/comanda", (req, res) => {
     if (req.body.usuario_id && req.body.producte_id) {
-      const statement = db.prepare('INSERT INTO comandes (usuario_id, producte_id) VALUES (?,?)')
-      const informacion = statement.run(req.body.usuario_id, req.body.producte_id)
-      console.log(informacion)
+      const statement = db.prepare("INSERT INTO comandes (usuario_id, producte_id) VALUES (?,?)")
+      statement.run(req.body.usuario_id, req.body.producte_id)
     }
   res.redirect("comandes");
 })
+//////////////////////////////////////////////////////////////////////
+//Actividad 6.5
 
 
+app.get("/usuarioedit", (req, res) => {
+  const ID = req.query.ID
+  const usuario = db.prepare("select * from usuarios where ID = ?").get(ID)
+  res.render("usuarioedit", {usuario: usuario});
+})
 
+app.post("/usuarioedit", (req, res) => {
+
+    if (req.body.nombre && req.body.email && req.body.ID) {
+      const statement = db.prepare("UPDATE usuarios SET nombre = ?, email = ? WHERE ID = ?")
+      statement.run( req.body.nombre, req.body.email, req.body.ID)
+    }
+    res.redirect("usuarios");
+})
 
 
 
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-
-  app.get("/",(req,res)=>{
-    
-  })
 
 
   app.listen(port,()=>{
