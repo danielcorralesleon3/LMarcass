@@ -44,11 +44,7 @@ app.use(express.urlencoded({extended:true}))
     res.render('comandes', {comanda: rows})
   })
 
-  app.get('/comanda', (req, res) => {
-    productesID=req.query.id;
-    const rows=db.prepare("SELECT * from comandes c join productes p on c.producte_id=p.id join usuarios u on c.usuario_id=u.id and C.ID=?").get(productesID);
-    res.json(rows)
-  })
+ 
 
 ///////////////////////////////////////////////////////////////////////////////
 // Actividad 6.2
@@ -92,9 +88,28 @@ app.post("/producto",(req,res) =>{
 app.get('/detalles', (req, res) => {
   id = req.query.ID
   const row = db.prepare('SELECT * from usuarios where ID = ?').get(id);
-  console.log("row "+row);
   res.render('detalles', { usuario: row })
 })
+
+///////////////////////////////////////////////////////////////////////////////////
+// Actividad 6.4
+
+app.get('/comanda', (req, res) =>{
+  const rowsproductos = db.prepare('SELECT * from productes').all()
+  const rowsusuario = db.prepare('SELECT * from usuarios').all()
+
+  res.render("comanda", {usuarios: rowsusuario, productes: rowsproductos});
+})
+app.post('/comanda', (req, res) => {
+  console.log(req.body);
+    if (req.body.usuario_id && req.body.producte_id) {
+      const statement = db.prepare('INSERT INTO comandes (usuario_id, producte_id) VALUES (?,?)')
+      const informacion = statement.run(req.body.usuario_id, req.body.producte_id)
+      console.log(informacion)
+    }
+  res.redirect("comandes");
+})
+
 
 
 
