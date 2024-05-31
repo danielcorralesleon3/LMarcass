@@ -1,0 +1,20 @@
+<%- include("header") %>
+
+    <form action="/comandesedit" method="post">
+        <input hidden name="id" value="<%= comanda.id %>">
+        <label for="usuario">usuario:</label>
+        <select id="usuario_id" name="usuarios">
+            <% usuarios.forEach((usuario, index) => { %>
+                <option value="<%= usuario.ID %>" <% if (comanda.usuario_id== usuario.ID) { %> selected <% } %>><%=usuario.nombre %></option>
+            <% }) %>
+        </select>
+    
+        <label for="producto">producte:</label>
+        <select id="producte_id" name="productes">
+            <% productes.forEach((producte, index) => { %>
+                <option value="<%= producte.id %>" <% if (comanda.producte_id== producte.id) { %> selected <% } %>><%=producte.nom %></option>
+            <% }) %>
+        </select>
+        <button type="submit">Enviar</button>
+    </form>
+    <%- include("footer") %>

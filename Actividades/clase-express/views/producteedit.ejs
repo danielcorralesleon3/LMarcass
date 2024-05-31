@@ -1,0 +1,17 @@
+<%- include("header") %>
+
+<form action="/producteedit" method="post">
+   
+    <input hidden name="id" value="<%= producte_select.id %>">
+   
+    <label for="nom">nombre:</label>
+    <input type="text" name="nom" id="nom" value="<%= producte_select.nom %>">
+   
+
+    <label for="precio">precio:</label>
+    <input type="text" name="precio" id="precio" value="<%= producte_select.precio %>"> 
+   
+
+    <button type="submit">enviar</button>
+</form>
+<%- include("footer") %>

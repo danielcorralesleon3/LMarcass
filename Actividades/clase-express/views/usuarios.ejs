@@ -1,6 +1,8 @@
 <%- include("header") %>
 
 <% usuarios.forEach((usuario,index)=>{ %>
-<p><a href="/detalles?ID=<%= usuario.ID %>"><%=usuario.nombre %></a></p>
+<p><a class="btn" href="/detalles?ID=<%= usuario.ID %>"><%=usuario.nombre %></a></p>
+<a class="btn" href="/usuarioedit?ID=<%= usuario.ID %>">Editar usuario</a>
+//
  <% })%>
 <%- include("footer") %>

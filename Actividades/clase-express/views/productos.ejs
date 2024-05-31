@@ -2,5 +2,7 @@
 
 <% producto.forEach((producto,index)=>{ %>
 <p><%=producto.nom %></p>
+<a class="btn" href="/producteedit?id=<%= producto.id %>">Editar producto</a>
  //<% })%>
+ 
 <%- include("footer") %>

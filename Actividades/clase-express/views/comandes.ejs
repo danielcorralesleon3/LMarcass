@@ -2,7 +2,7 @@
 
 <% comanda.forEach((comanda,index)=>{ %>
 <p><%=comanda.nombre %> <%=comanda.nom %> </p>
+<a class="btn" href="/comandesedit?id=<%= comanda.id %>">Editar comanda</a>
  <% })%>
 
- <a href="/comandaedit"></a>
 <%- include("footer") %>
